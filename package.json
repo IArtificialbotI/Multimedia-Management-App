@@ -1,0 +1,76 @@
+{
+  "name": "Multi-media-management",
+  "description": "Electron React App for photo management",
+  "author": "Author <author@gmail.com> (https://author.com/)",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "./",
+  "main": "public/electron.js",
+  "build": {
+    "appId": "photo-management-electron-builder",
+    "win": {
+      "asar": true,
+      "target": [
+        "portable"
+      ]
+    },
+    "directories": {
+      "output": "release"
+    }
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.5.0",
+    "antd": "^4.13.1",
+    "electron-is-dev": "^2.0.0",
+    "leaflet": "^1.7.1",
+    "leaflet-geosearch": "^3.2.2",
+    "nedb": "^1.8.0",
+    "react": "^17.0.1",
+    "react-country-region-selector": "^3.0.2",
+    "react-dom": "^17.0.1",
+    "react-leaflet": "^3.1.0",
+    "react-scripts": "4.0.3",
+    "react-virtualized": "^9.22.3",
+    "video-react": "^0.14.1"
+  },
+  "scripts": {
+    "dev": "concurrently -k \"cross-env BROWSER=none yarn start\" \"yarn:electron\"",
+    "electron": "wait-on tcp:3000 && electron .",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "package": "yarn build && electron-builder --dir",
+    "dist": "yarn build && electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "concurrently": "^6.0.0",
+    "cross-env": "^7.0.3",
+    "electron": "^12.0.0",
+    "electron-builder": "^22.10.5",
+    "electron-reload": "^1.5.0",
+    "wait-on": "^5.2.1"
+  }
+}

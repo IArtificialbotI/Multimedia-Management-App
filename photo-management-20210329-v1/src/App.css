@@ -1,0 +1,66 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* logo */
+.app-logo {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-logo > span {
+  color: #fff;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+/* sider */
+.app-sider {
+  overflow: auto;
+  height: 100%;
+  z-index: 2;
+}
+
+.app-site-layout {
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+/* header */
+.site-layout-header {
+  padding: 0;
+  background: #fff;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  box-shadow: 0 2px 8px #f0f1f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-search {
+  width: 550px;
+  padding-left: 15px;
+}
+.icons-list {
+  min-width: 422px;
+}
+.icons-list > .ant-btn {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+/* content */
+.site-layout-content {
+  margin-top: 64px;
+  height: 100%;
+  width: 100%;
+}
+.site-layout-content > .content {
+  padding: 24px;
+  min-height: 360px;
+  background-color: #fff;
+}
